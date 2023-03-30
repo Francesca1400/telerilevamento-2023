@@ -1,0 +1,22 @@
+# Time series analysis
+setwd( "C:/Lab/Greenland" )
+
+#Importing the 4 file in Greenland
+lst_2000 <- raster("lst_2000.tif")
+lst_2005 <- raster("lst_2005.tif")
+lst_2010 <- raster("lst_2010.tif")
+lst_2015 <- raster("lst_2015.tif")
+
+#Plotting
+plot(lst_2000)
+plot(lst_2005)
+plot(lst_2010)
+plot(lst_2015)
+
+# par
+par(mfrow=c(2,2))
+plot(lst_2000)
+plot(lst_2005)
+plot(lst_2010)
+plot(lst_2015)
+
