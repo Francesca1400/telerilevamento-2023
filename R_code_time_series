@@ -20,3 +20,26 @@ plot(lst_2005)
 plot(lst_2010)
 plot(lst_2015)
 
+#creating the list
+lst_2000 <- raster("lst_2000.tif")
+ls()
+rlist <- list.files (pattern = "lst")
+rlist
+#using of lapply function
+import <- lapply(rlist, raster)
+import
+
+# using of stack function
+TGr <- stack(import)
+TGr
+plot(TGr)
+
+#plotting RGB
+plotRGB(TGr, 1, 2, 3, stretch="Lin")
+plotRGB(TGr, 2, 3, 4, stretch="Lin")
+plotRGB(TGr, 4, 3, 2, stretch="Lin")
+
+# levelplot(TGr)
+cl <- colorRampPalette(c("blue","light blue","pink","red"))(100)
+plot(TGr, col=cl)
+
