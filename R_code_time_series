@@ -43,3 +43,46 @@ plotRGB(TGr, 4, 3, 2, stretch="Lin")
 cl <- colorRampPalette(c("blue","light blue","pink","red"))(100)
 plot(TGr, col=cl)
 
+
+#Excercise 2: measured NO2 during the lockdown period 
+#Importing file
+
+setwd ("C:/lab/EN")
+EN01 <- raster("EN_0001.png")
+
+#colorRampPalette and plotting
+cl <- colorRampPalette(c('red','orange','yellow'))(100)
+plot(EN01, col=cl)
+
+#import all files
+rlist <- list.files(pattern="EN")
+rimp <- lapply(rlist, raster)
+it <- stack(rimp)
+#plotting
+plot(it, col=cl)
+
+#check
+par(mfrow = c(1,2))
+plot(EN01, col=cl)
+plot(it[[1]], col=cl)
+
+#check 2
+difcheck <- EN01 - it[[1]]
+difcheck
+plot(difcheck)
+
+#first and last data
+par(mfrow=c(1,2))
+plot(it[[1]], col=cl)
+plot(it[[13]], col=cl)
+
+#difference
+difen = it [[1]]- it [[13]]
+cldif <- colorRampPalette(c('blue','white','red'))(100)
+plot(difen, col=cldif)
+
+# plotRGB of three files together
+plotRGB(en, r=1, g=7, b=13, stretch="lin")
+plotRGB(en, r=1, g=7, b=13, stretch="hist")
+
+
