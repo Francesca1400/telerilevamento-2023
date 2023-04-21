@@ -50,5 +50,62 @@ plot(defor2class)
 install.packages("patchwork")
 library(patchwork)
 
+#Class percentages defor1
+
+frequencies1 <- freq(defor1class)
+tot1 = ncell(defor1class)
+tot1   #tot1=341292
+percentages1 = frequencies1 * 100 /  tot1
+percentages1  #Class1 = 89.74632%  #Class2 = 10.25368%
+
+#Class percentages defor2
+frequencies2 <- freq(defor2class)
+tot2 = ncell(defor2class)
+tot2  #Tot 2 = 342726
+
+percentages2 = frequencies2 * 100 /  tot2
+percentages2  #Class1 = 47.931  #Class2 = 52.069
+
+#Build a dataframe
+
+cover <- c("Forest", "Bare soil ")
+percent1992 <- c(89.74, 10.25)
+percent2006 <- c(47.93, 52,09)
+
+#creating dataframe
+#final tabl
+
+percent_1992 <- c(89.83, 10.16)
+percent_2006 <- c(52.06, 47.93)
+
+percentages <- data.frame(cover, percent_1992, percent_2006)
+percentages
+
+#Plotting with ggplot2
+#Plotting
+
+#1992
+ggplot(percentages, aes(x=cover, y=percent_1992, color=cover)) + geom_bar(stat="identity", fill="white")
+#2006
+ggplot(percentages, aes(x=cover, y=percent_2006, color=cover)) + geom_bar(stat="identity", fill="white")
+
+#Petchwork of the two graphics
+p1 <- ggplot(percentages, aes(x=cover, y=percent_1992, color=cover)) + geom_bar(stat="identity", fill="white")
+p2 <- ggplot(percentages, aes(x=cover, y=percent_2006, color=cover)) + geom_bar(stat="identity", fill="white")
+p1+p2
+
+#put the same percentages limits
+#use ylim function
+p1 <- ggplot(percentages, aes(x=cover, y=percent_1992, color=cover)) + geom_bar(stat="identity", fill="white") + ylim(c(0,100))
+p2 <- ggplot(percentages, aes(x=cover, y=percent_2006, color=cover)) + geom_bar(stat="identity", fill="white") + ylim(c(0,100))
+p1+p2
+
+
+
+
+
+
+
+
 
 
