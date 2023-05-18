@@ -1,6 +1,6 @@
 #Copernicus data
 
-#install.packages("ncdf4")
+install.packages("ncdf4")
 library(ncdf4)
 library(raster)
 library(ggplot2)
