@@ -47,8 +47,8 @@ plot(difdvi)
 
 # Calculating NDVI 1992 and NDVI2006
 
-ndvi1992 = dvi1992/ (l1992[[2]]+ l1992[[1]])
-ndvi2006 = dvi2006/ (l2006[[2]]+ l2006[[1]])
+ndvi1992 = dvi1992/ (l1992[[1]]+ l1992[[2]])
+ndvi2006 = dvi2006/ (l2006[[1]]+ l2006[[2]])
 ndvi1992
 ndvi2006
 
