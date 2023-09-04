@@ -12,20 +12,20 @@ setwd("C:/Lab/")
 # to store our data all together in one file
 l2011 <- brick("p224r63_2011_masked.grd)
 
-# Plotting the data in a savage manner
+# Plotting the data
 plot(l2011)
 
 # Now let's change the color of our graph by creating a special palette
 clb <- colorRampPalette(c("red", "orange", "yellow")) (100) #100 are the shades
 plot(l2011, col=clb)
 
-# Plotting one element. 
+# Plotting one element
 plot(l2011[[4]], col=clb)  
 plot(l2011$B4_sre, col=clb) #We use the double brackets or the dollar sign to choose the item we want
 nir <- l2011 [[4]]
 plot(nir, col=clb)
 
-#Exercise: change the colour gamut for all the images
+# Exercise: change the colour gamut for all the images
 clb <- colorRampPalette(c("blue", "darkorchid", "cyan3")) (100)
 plot(l2011, col=clb)
 
@@ -45,7 +45,7 @@ dev.off() # It closes graphs
 # We can use the par() function in R to create multiple graphs at the same time. This helps us create an arrangement of figures with fine control
 par(mfrow = c (2,1)) 
 
-# Plotting the first 4 layers /bands
+# Plotting the first 4 layers / bands
 par(mfrow = c(2,2))
 
 # B1 (blue)
@@ -65,7 +65,7 @@ clNIR <- colorRampPalette(c("darkorchid4", "chocolate4", "darkorange")) (100)
 plot(l2011[[4]], col=clNIR)
 
 # RGB plotting
-plotRGB(l2011, r=3, g=2, b=1, stretch="Lin") #
+plotRGB(l2011, r=3, g=2, b=1, stretch="Lin") 
 plotRGB(l2011, r=4, g=3, b=2, stretch="Lin")
 
 # Multiframe with natural and false colours
