@@ -1,21 +1,24 @@
+# Recall the packages from the library
 library (raster)
 library(ggplot2)
 
-setwd("C:/Lab/")
-#import image
-sen<- brick("sentinel.png")
-plot(sen)
+setwd("C:/Lab/") # Windows
+
+# Import image
+sen <- brick("sentinel.png")
+plot(sen) 
+
 #Plotting RGB
 RGB(sen, 1, 2, 3, stretch ="lin")
 
-plonir<- sen[[1]]
-sd3<- focal(nir, matrix(1/9, 3, 3), fun=sd)
+plonir <- sen[[1]]
+sd3 <- focal(nir, matrix(1/9, 3, 3), fun=sd)
 
 #Plotting
 plot(sd3) 
 
 #Now plotting with ggplot2
-sd3d<- as.data.frame(sd3, xy=TRUE)
+sd3d <- as.data.frame(sd3, xy=TRUE)
 
 ggplot()+ 
 geom_raster(sd3d, mapping = aes(x=x, y=y, fill=layer))
