@@ -57,7 +57,7 @@ p2 <- ggplot()+
    ggtitle("Standard deviation via the inferno colour scale")
 p1 + p2
 
-# xcercise: plot the original image (nir) and its standard deviation
+# Excercise: plot the original image (NIR) and its standard deviation
 nird <- as.data.frame(nir, xy=T)
 p3 <- ggplot()+
   geom_raster(nird, mapping = aes(x=x, y=y, fill=sentinel_1))+
