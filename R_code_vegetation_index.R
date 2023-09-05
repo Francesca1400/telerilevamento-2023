@@ -39,7 +39,7 @@ plot(dvi1992, col=cl)
 plot(dvi2006, col=cl)
 
 # Difference between dvi1992 and dvi2006
-difdvi<- dvi1992-dvi2006
+difdvi <- dvi1992-dvi2006
 plot(difdvi)
 
 # Range DVI (8 bit): -255 a 255
