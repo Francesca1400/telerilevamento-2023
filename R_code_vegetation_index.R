@@ -19,7 +19,7 @@ plotRGB(l1992, 3, 2, 1, stretch="Lin")
 dvi1992 = l1992[[1]] - l1992[[2]]
 cl <- colorRampPalette(c("darkblue", "yellow", "red", "black"))(100)
 plot(dvi1992, col=cl)
-#DVI = NIR – Red; distinguishes between soil and vegetation. 
+# DVI = NIR – Red; distinguishes between soil and vegetation 
 
 # Excercise: plot the image from 1992 ontop of that of 2006
 par(mfrow = c(2,1))
@@ -42,9 +42,9 @@ plot(dvi2006, col=cl)
 difdvi<- dvi1992-dvi2006
 plot(difdvi)
 
-#Range DVI (8 bit): -255 a 255
-#Range DVI (16 bit): -65535 a 65535
-#Range NDVI: -1; 1
+# Range DVI (8 bit): -255 a 255
+# Range DVI (16 bit): -65535 a 65535
+# Range NDVI: -1; 1
 
 # Calculating NDVI 1992 and NDVI2006
 ndvi1992 = dvi1992/ (l1992[[1]]+ l1992[[2]])
