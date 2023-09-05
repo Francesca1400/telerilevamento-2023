@@ -2,7 +2,11 @@
 library (raster)
 library(ggplot2)
 
-#Set the working directory
+# Install viridis packages
+install.packages("viridis")
+library(viridis)
+
+# Set the working directory
 setwd("C:/Lab/") # Windows
 
 # Import image
@@ -19,14 +23,10 @@ sd3 <- focal(nir, matrix(1/9, 3, 3), fun=sd)
 plot(sd3) 
 
 # Now plotting with ggplot2
-# Ggploot2 is a R package dedicated to data visualization
+# "ggploot2" is a R package dedicated to data visualization
 sd3d <- as.data.frame(sd3, xy=TRUE)
 ggplot()+ 
   geom_raster(sd3d, mapping = aes(x=x, y=y, fill=layer))
-
-# Install viridis packages
-install.packages("viridis")
-library(viridis)
 
 # Plotting with ggplot2 and viridis
 ggplot()+
