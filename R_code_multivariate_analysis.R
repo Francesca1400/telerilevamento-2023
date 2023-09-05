@@ -3,7 +3,7 @@
 # Set workig directory
 setwd("C:/lab/") #Windows
 
-# Retrieve the packages I need from the library
+# Recall the packages I need from the library
 library(raster)
 library(ggplot2)
 library(viridis)
