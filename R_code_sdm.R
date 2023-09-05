@@ -3,7 +3,7 @@
 install.packages("sdm")
 install.packages("rgdal", dependencies = T)
 
-# Image into "file" the data that was downloaded as "shp" 
+# Image into "file" the data that was downloaded as "shp", 
 # using the right function via previously downloaded packages
 file <- system.file("external/species.shp", package="sdm")
 file
