@@ -36,24 +36,24 @@ plot(pci)
 pcid1 <- as.data.frame(pci[[1]], xy=T) # ggplot wants tabular data and not raster
 pci
 
-ggplot() +
+ggplot()+
   geom_raster(pcid1, mapping = aes(x=x, y=y, fill=PC1)) +
   scale_fill_viridis()
 
 pcid3 <- as.data.frame(pci[[3]], xy=T) 
-ggplot() +
+ggplot()+
   geom_raster(pcid3, mapping = aes(x=x, y=y, fill=PC3)) +
   scale_fill_viridis()
 
 # We use patchwork to put them side by side
-plot1 <- ggplot() +
+plot1 <- ggplot()+
   geom_raster(pcid1, mapping = aes(x=x, y=y, fill=PC1)) +
-  scale_fill_viridis() +
+  scale_fill_viridis()+
   ggtitle("Principal Component 1")
 
-plot3 <- ggplot() +
+plot3 <- ggplot()+
   geom_raster(pcid3, mapping = aes(x=x, y=y, fill=PC3)) +
-  scale_fill_viridis() +
+  scale_fill_viridis()+
   ggtitle("Principal Component 3")
 
 plot1 + plot3
@@ -64,14 +64,14 @@ sd3
 sd3d <- as.data.frame(sd3, xy=T)
 
 # I make a patchwork for PC1 and its standard deviation
-plotsd <- ggplot() +
-  geom_raster(sd3d, mapping = aes(x=x, y=y, fill=layer)) +
-  scale_fill_viridis(option="inferno") +
+plotsd <- ggplot()+
+  geom_raster(sd3d, mapping = aes(x=x, y=y, fill=layer))+
+  scale_fill_viridis(option="inferno")+
   ggtitle("Standard Deviation of PC1 (3x3)")
 
-plot1 <- ggplot() +
-  geom_raster(pcid1, mapping = aes(x=x, y=y, fill=PC1)) +
-  scale_fill_viridis(option="inferno") +
+plot1 <- ggplot()+
+  geom_raster(pcid1, mapping = aes(x=x, y=y, fill=PC1))+
+  scale_fill_viridis(option="inferno")+
   ggtitle("Principal Component 1")
 
 plot1 + plotsd
