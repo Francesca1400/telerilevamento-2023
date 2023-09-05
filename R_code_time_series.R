@@ -67,7 +67,7 @@ rlist <- list.files(pattern="EN")
 # lapply(X,FUN)
 rimp <- lapply(rlist, raster)
 
-#Stack
+# Stack
 it <- stack(rimp)
 
 # Plotting
