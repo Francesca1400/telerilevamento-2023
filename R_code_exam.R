@@ -33,4 +33,10 @@ lst258 <- list.files(pattern="T33SUC_202308")
 import2508 <- lapply(lst258, raster)
 i258 <- stack(import067)
 
+# Now let's plot in RGB to have our images with natural colors
+
+plotRGB(i075, 3, 2, 1, stretch="lin")
+plotRGB(i067, 3, 2, 1, stretch="lin")
+plotRGB(i258, 3, 2, 1, stretch="lin")
+
 
