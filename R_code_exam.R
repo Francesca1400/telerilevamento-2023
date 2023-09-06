@@ -20,3 +20,17 @@ library(patchwork) # To insert two different charts within the same chart
 lst075 <- list.files(pattern="T33SUC_202305")
 import075 <- lapply(lst075, raster)
 i075 <- stack(import075)
+
+# Data july 6
+
+lst067 <- list.files(pattern="T33SUC_202307")
+import067 <- lapply(lst067, raster)
+i067 <- stack(import067)
+
+# Data august 25
+
+lst258 <- list.files(pattern="T33SUC_202308")
+import2508 <- lapply(lst258, raster)
+i258 <- stack(import067)
+
+
