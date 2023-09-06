@@ -39,7 +39,21 @@ plotRGB(i075, 3, 2, 1, stretch="lin")
 plotRGB(i067, 3, 2, 1, stretch="lin")
 plotRGB(i258, 3, 2, 1, stretch="lin")
 
-#crop
+# Now I crop the image highlighting only the part that interests us
+# Crop 1 (may)
+
 e <- extent(3e+05, 391170, 4202370, 4240420)
 may <- crop(i075, e)
 plotRGB(may, 3, 2, 1, stretch="lin")
+
+#Crop 2 (july)
+
+e <- extent(3e+05, 391170, 4202370, 4240420)
+july <- crop(i067, e)
+plotRGB(july, 3, 2, 1, stretch="lin")
+
+#Crop 3 (august)
+
+e2 <- extent(3e+05, 409800, 4180200, 4290020)
+august <- crop(i258, e2)
+plotRGB(i258, 3, 2, 1, stretch="lin")
