@@ -39,4 +39,7 @@ plotRGB(i075, 3, 2, 1, stretch="lin")
 plotRGB(i067, 3, 2, 1, stretch="lin")
 plotRGB(i258, 3, 2, 1, stretch="lin")
 
-
+#crop
+e <- extent(3e+05, 391170, 4202370, 4240420)
+may <- crop(i075, e)
+plotRGB(may, 3, 2, 1, stretch="lin")
