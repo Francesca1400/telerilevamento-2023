@@ -64,10 +64,37 @@ plotRGB(may, 3, 2, 1, stretch="lin")
 plotRGB(july, 3, 2, 1, stretch="lin")
 plotRGB(august, 3, 2, 1, stretch="lin")
 
+#----------------------------------------------------------------------------------------------------------------
+### Qualitative analysis of vegetation health by calculating DVI and NDVI
+
 # Let's now calculate the DVI taking into account that:
 # Band 4 = NIR
 # Band 3 = red
 # The calculation to be made for the DVI is therefore NIR-red in order to inspect 
 # the nutritional status of the vegetation following the rise in temperatures and the fires in the month of August
+
+# 1. DVI of the month of May
+
+dvimay = may[[4]] - may [[3]]
+cl <- colorRampPalette(c("darkblue", "yellow", "red", "black"))(100)
+plot(dvimay, col=cl)
+
+# 2. DVI of the month of July
+
+dvijuly = july[[4]] - july [[3]]
+plot(dvimay, col=cl)
+
+# 3. DVI of the month of August
+
+dviaugust = august[[4]] - august [[3]]
+plot(dvimay, col=cl)
+
+# I now create a par in which I insert the 3 images of the different
+# DVIs relating to the various months
+
+par(mfrow= c(1,3))
+plot(dvimay, col= cl)
+plot(dvijuly, col= cl)
+plot(dviaugust, col=cl)
 
 
