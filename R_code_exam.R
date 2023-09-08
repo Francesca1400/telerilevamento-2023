@@ -30,8 +30,8 @@ i067 <- stack(import067)
 # Data august 25
 
 lst258 <- list.files(pattern="T33SUC_202308")
-import2508 <- lapply(lst258, raster)
-i258 <- stack(import067)
+import258 <- lapply(lst258, raster)
+i258 <- stack(import258)
 
 # Now let's plot in RGB to have our images with natural colors
 
@@ -48,12 +48,26 @@ plotRGB(may, 3, 2, 1, stretch="lin")
 
 #Crop 2 (july)
 
-e <- extent(3e+05, 391170, 4202370, 4240420)
 july <- crop(i067, e)
 plotRGB(july, 3, 2, 1, stretch="lin")
 
 #Crop 3 (august)
 
-e2 <- extent(3e+05, 409800, 4180200, 4290020)
-august <- crop(i258, e2)
-plotRGB(i258, 3, 2, 1, stretch="lin")
+august <- crop(i258, e)
+plotRGB(august, 3, 2, 1, stretch="lin")
+
+# Let's now make a par in which we insert the three images relating to 
+# the three different months in which the degenerative state of the vegetation is clearly visible
+
+par(mfrow= c(3,1))
+plotRGB(may, 3, 2, 1, stretch="lin")
+plotRGB(july, 3, 2, 1, stretch="lin")
+plotRGB(august, 3, 2, 1, stretch="lin")
+
+# Let's now calculate the DVI taking into account that:
+# Band 4 = NIR
+# Band 3 = red
+# The calculation to be made for the DVI is therefore NIR-red in order to inspect 
+# the nutritional status of the vegetation following the rise in temperatures and the fires in the month of August
+
+
