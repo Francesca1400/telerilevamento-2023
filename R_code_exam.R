@@ -63,6 +63,7 @@ par(mfrow= c(3,1))
 plotRGB(may, 3, 2, 1, stretch="lin")
 plotRGB(july, 3, 2, 1, stretch="lin")
 plotRGB(august, 3, 2, 1, stretch="lin")
+dev.off()
 
 #----------------------------------------------------------------------------------------------------------------
 #### Qualitative analysis of vegetation health by calculating DVI and NDVI
@@ -97,6 +98,7 @@ par(mfrow= c(1,3))
 plot(dvimay, col= cl)
 plot(dvijuly, col= cl)
 plot(dviaugust, col=cl)
+dev.off()
 
 ### Let's now calculate the NDVI
 
@@ -115,5 +117,13 @@ plot(ndvijuly, col= cl)
 ndviaugust = dviaugust/(august[[4]] + august[[3]])
 plot(ndviaugust, col= cl)
 
+# I now create a par in which I insert the 3 images of the different
+# NDVIs relating to the various months
+
+par(mfrow= c(1,3))
+plot(ndvimay, col= cl)
+plot(ndvijuly, col= cl)
+plot(ndviaugust, col=cl)
+dev.off()
 
 
