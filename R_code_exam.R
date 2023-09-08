@@ -126,4 +126,11 @@ plot(ndvijuly, col= cl)
 plot(ndviaugust, col=cl)
 dev.off()
 
+# Let's now evaluate, with the difference between the NDVI for the month of May and the
+# NDVI for the month of August, how the health status of the vegetation has changed
+
+cld <- colorRampPalette(c('blue', 'white', 'red')) (100)
+difndvi = ndvimay - ndviaugust
+plot(difndvi, col=cld)
+
 
