@@ -133,4 +133,49 @@ cld <- colorRampPalette(c('blue', 'white', 'red')) (100)
 difndvi = ndvimay - ndviaugust
 plot(difndvi, col=cld)
 
+#### -----------------------------------------------------------------------------
+### Classification 
+
+## 1) Get all the single values for individual months
+
+singlenrmay <- getValues(may)
+singlenrmay
+
+singlenrjuly <- getValues(july)
+singlenrjuly
+
+singlenraugust <- getValues(august)
+singlenraugust
+
+# 2) Classify
+# "kmeans" clustering used unsupervised machine learning algorithm 
+# for partitioning a given data set into a set of k groups
+
+kclustermay <- kmeans(singlenrmay, centers = 3)
+kclusterjuly <- kmeans(singlenrjuly, centers = 3)
+kclusteraugust <- kmeans(singlenraugust, centers = 3)
+
+# 3) Set values to a raster on the basis of so
+
+classmay <- setValues(may[[1]], kclustermay$cluster)
+classjuly <- setValues(july[[1]], kclusterjuly$cluster)
+classaugust <- setValues(august[[1]], kclusteraugust$cluster)
+
+# PLotting with RampPalette
+
+cl <- colorRampPalette(c('yellow','black','red'))(100)
+plot(classmay, col=cl)
+plot(classjuly, col=cl)
+plot(classaugust, col=cl)
+
+dev.off()
+
+#Par for comparation
+
+par(mfrow= c(1,3))
+plot(classmay, col=cl)
+plot(classjuly, col=cl)
+plot(classaugust, col=cl)
+
+dev.off()
 
