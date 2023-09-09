@@ -217,4 +217,38 @@ percentages3
 # [2,] 5.765319e-06 10.86722
 # [3,] 8.647979e-06 59.14084
 
-#
+### Let's create a dataframe that represents the results obtained
+
+cover <- c("Burnt soil", "Water ", "Vegetation")
+percent_may <- c(6.68, 58.75, 34.56)
+percent_july <- c(7.11, 58.70, 34.20)
+percent_august <- c(10.90, 59.14, 30.00)
+percentages <- data.frame(cover, percent_may, percent_july, percent_august)
+percentages
+
+# Plotting with ggplot2
+
+ggplot(percentages, aes(x=cover, y=percent_may, color=cover)) + geom_bar(stat="identity", fill="white") # may
+ggplot(percentages, aes(x=cover, y=percent_july, color=cover)) + geom_bar(stat="identity", fill="white") # july
+ggplot(percentages, aes(x=cover, y=percent_august, color=cover)) + geom_bar(stat="identity", fill="white") # august
+
+dev.off()
+p1 <- ggplot(percentages, aes(x=cover, y=percent_may, color=cover)) + geom_bar(stat="identity", fill="white") +
+  ggtitle(" May 2023") + ylim(c(0,100))
+p1
+
+p2 <- ggplot(percentages, aes(x=cover, y=percent_july, color=cover)) + geom_bar(stat="identity", fill="white")+
+  ggtitle(" July 2023") + ylim(c(0,100))
+p2
+
+p3 <- ggplot(percentages, aes(x=cover, y=percent_august, color=cover)) + geom_bar(stat="identity", fill="white") +
+  ggtitle(" August 2023") + ylim(c(0,100))
+p3
+
+# Let's now use the patchwork to merge into 3 graphs and evaluate the situation as a whole
+p1+p2+p3
+
+### We can therefore note that, except for the surface of the water which has remained the same:
+# 1. The percentage of burned area increased during the 3 months of observation;
+# 2. The percentage of vegetation, however, has decreased precisely because of these environmental situations which have affected its health
+
