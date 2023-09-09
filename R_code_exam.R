@@ -179,3 +179,42 @@ plot(classaugust, col=cl)
 
 dev.off()
 
+### Let's calculate the number of pixels associated to each class to evaluate the covered area
+# 1 -> relating to the month of May
+# 2 -> relating to the month of July
+# 3 -> relating to the month of August
+
+frequenciesmay <- freq(classmay)
+tot1 = ncell(classmay)
+tot1  # tot1= 34690185
+percentages1 = frequenciesmay * 100 /  tot1
+percentages1
+
+#             value     count
+# [1,] 2.882660e-06  6.677191
+# [2,] 5.765319e-06 58.759101
+# [3,] 8.647979e-06 34.563707
+
+frequenciesjuly <- freq(classjuly)
+tot2 = ncell(classjuly)
+tot2  #tot2= 34690185
+percentages2 = frequenciesjuly * 100 /  tot2
+percentages2
+
+#             value    count
+# [1,] 2.882660e-06  7.11132
+# [2,] 5.765319e-06 58.70650
+# [3,] 8.647979e-06 34.18218
+
+frequenciesaugust <- freq(classaugust)
+tot3 = ncell(classaugust)
+tot3 #tot3= 34690185
+percentages3 = frequenciesaugust * 100 /  tot3
+percentages3
+
+#            value    count
+# [1,] 2.882660e-06 29.99195
+# [2,] 5.765319e-06 10.86722
+# [3,] 8.647979e-06 59.14084
+
+#
