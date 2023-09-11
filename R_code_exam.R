@@ -189,7 +189,7 @@ dev.off()
 
 frequenciesmay <- freq(classmay)
 tot1 = ncell(classmay)
-tot1  # tot1= 34690185
+tot1  # tot1 = 34690185
 percentages1 = frequenciesmay * 100 /  tot1
 percentages1
 
@@ -200,7 +200,7 @@ percentages1
 
 frequenciesjuly <- freq(classjuly)
 tot2 = ncell(classjuly)
-tot2  #tot2= 34690185
+tot2  #tot2 = 34690185
 percentages2 = frequenciesjuly * 100 /  tot2
 percentages2
 
@@ -211,7 +211,7 @@ percentages2
 
 frequenciesaugust <- freq(classaugust)
 tot3 = ncell(classaugust)
-tot3 #tot3= 34690185
+tot3 #tot3 = 34690185
 percentages3 = frequenciesaugust * 100 /  tot3
 percentages3
 
