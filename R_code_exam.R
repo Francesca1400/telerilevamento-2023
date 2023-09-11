@@ -82,25 +82,25 @@ dev.off()
 
 dvimay = may[[4]] - may [[3]]
 cl <- colorRampPalette(c("darkblue", "yellow", "red", "black"))(100)
-plot(dvimay, col=cl)
+plot(dvimay, col = cl)
 
 # 2. DVI of the month of July
 
 dvijuly = july[[4]] - july [[3]]
-plot(dvimay, col=cl)
+plot(dvimay, col = cl)
 
 # 3. DVI of the month of August
 
 dviaugust = august[[4]] - august [[3]]
-plot(dvimay, col=cl)
+plot(dvimay, col = cl)
 
 # I now create a par in which I insert the 3 images of the different
 # DVIs relating to the various months
 
-par(mfrow= c(1,3))
-plot(dvimay, col= cl)
-plot(dvijuly, col= cl)
-plot(dviaugust, col=cl)
+par(mfrow = c(1,3))
+plot(dvimay, col = cl)
+plot(dvijuly, col = cl)
+plot(dviaugust, col = cl)
 dev.off()
 
 ### Let's now calculate the NDVI
@@ -108,12 +108,12 @@ dev.off()
 # 1. NDVI of the month of May
 
 ndvimay = dvimay/(may[[4]] + may[[3]])
-plot(ndvimay, col= cl)
+plot(ndvimay, col = cl)
 
 # 2. NDVI of the month of July
 
 ndvijuly = dvijuly/(july[[4]] + july[[3]])
-plot(ndvijuly, col= cl)
+plot(ndvijuly, col = l)
 
 # 3. NDVI of the month of August
 
