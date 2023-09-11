@@ -1,5 +1,5 @@
 # Hi everyone! I'm Francesca and this is my exam project for the geoecological remote sensing course of professor D. Rocchini. 
-# The project explains how the vegetation has changed due to the high temperatures of the summer months (June and July) 
+# The project explains how the vegetation has changed due to the high temperatures of the summer months (May and July) 
 # and the fires that occurred in August in the Belmonte area and in the areas close to the city of Palermo.
 
 # Data from: https://scihub.copernicus.eu/
