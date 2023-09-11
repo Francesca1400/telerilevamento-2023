@@ -7,15 +7,18 @@
 # First set the working directory
 setwd("C:/Lab/") # For Windows
 
-# We recall all the necessary packages
-library(raster) # Lettura, scrittura, manipolazione, analisi e modellazione di dati spaziali.
+# We install the necessary packages and then recall them with via the library
+install.packages("raster")
+install.packages("ggplot2")
+install.packages("patchwork")
+library(raster) #Reading, writing, manipulating, analyzing and modeling spatial data.
 library(ggplot2) # For graphs
 library(patchwork) # To insert two different charts within the same chart
 
 # Data may 7
 
-# Importiamo ora le varie bande tenendo conto che: Importa le bande rosse (B04), 
-# verde (B03), blu (B02) e nir (B08) e impilale in un unico oggetto
+# We now import the various bands taking into account that: Import the red bands (B04), 
+# green (B03), blue (B02) and nir (B08) and stack them into one object
 
 lst075 <- list.files(pattern="T33SUC_202305")
 import075 <- lapply(lst075, raster)
