@@ -8,6 +8,7 @@
 setwd("C:/Lab/") # For Windows
 
 # We install the necessary packages and then recall them with via the library
+
 install.packages("raster")
 install.packages("ggplot2")
 install.packages("patchwork")
@@ -68,7 +69,7 @@ plotRGB(july, 3, 2, 1, stretch="lin")
 plotRGB(august, 3, 2, 1, stretch="lin")
 dev.off()
 
-#----------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------
 #### Qualitative analysis of vegetation health by calculating DVI and NDVI
 
 ### Let's now calculate the DVI taking into account that:
@@ -136,7 +137,7 @@ cld <- colorRampPalette(c('blue', 'white', 'red')) (100)
 difndvi = ndvimay - ndviaugust
 plot(difndvi, col=cld)
 
-#### -----------------------------------------------------------------------------
+#### ----------------------------------------------------------------------------------------------
 ### Classification 
 
 ## 1) Get all the single values for individual months
@@ -252,6 +253,7 @@ p3
 p1+p2+p3
 
 ### We can therefore note that, except for the surface of the water which has remained the same:
-# 1. The percentage of burned area increased during the 3 months of observation;
+# 1. The percentage of burned area increased during the 3 months of observation
+# and it is hoped that as the months pass, the situation will improve, as will the health of the vegetation;
 # 2. The percentage of vegetation, however, has decreased precisely because of these environmental situations which have affected its health
 
