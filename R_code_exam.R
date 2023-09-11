@@ -213,9 +213,9 @@ percentages3 = frequenciesaugust * 100 /  tot3
 percentages3
 
 #            value    count
-# [1,] 2.882660e-06 29.99195
-# [2,] 5.765319e-06 10.86722
-# [3,] 8.647979e-06 59.14084
+# [1,] 2.882660e-06 10.86722
+# [2,] 5.765319e-06 59.14084 
+# [3,] 8.647979e-06 29.99195
 
 ### Let's create a dataframe that represents the results obtained
 
