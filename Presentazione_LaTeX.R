@@ -27,7 +27,6 @@
 }
 
 \section{Introduzione}
-
 \begin{frame}{Sommario}
 Il progetto si suddivide nelle seguenti \textbf{sezioni}:
 \begin{itemize}
@@ -45,8 +44,27 @@ Il progetto mira ad analizzare lo stato di salute della \textbf{vegetazione} in 
 
 
 \section{Materiali e metodi}
-\section{Risultati}
-\section{Conclusione}
+\begin{frame}{Importazione e visualizzazione delle immagini}
+\begin{itemize}
+    \item Importazione delle immagini 
+    \item Crop delle immagini per ritagliare l'area di indagine
+    \item Plot dell'area di studio con colori reali
+\end{itemize}
+    \end{frame}
 
+\begin{frame}{Plot RGB con colori reali}
+\includegraphics[width=\textwidth]{Plot in par.pdf}
+ \centering   
+\end{frame}
+
+\section{Risultati}
+\begin{frame}{}
+    
+\end{frame}
+
+\section{Conclusione}
+\begin{frame}{}
+    
+\end{frame}
 
 \end{document}
