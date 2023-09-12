@@ -195,9 +195,9 @@ percentages1 = frequenciesmay * 100 /  tot1
 percentages1
 
 #             value     count
-# [1,] 2.882660e-06  6.677191
-# [2,] 5.765319e-06 58.759101
-# [3,] 8.647979e-06 34.563707
+# [1,] 2.882660e-06  6.677191 #burnt soil
+# [2,] 5.765319e-06 58.759101 #water
+# [3,] 8.647979e-06 34.563707 #vegetation
 
 frequenciesjuly <- freq(classjuly)
 tot2 = ncell(classjuly)
@@ -206,9 +206,9 @@ percentages2 = frequenciesjuly * 100 /  tot2
 percentages2
 
 #             value    count
-# [1,] 2.882660e-06  7.11132
-# [2,] 5.765319e-06 58.70650
-# [3,] 8.647979e-06 34.18218
+# [1,] 2.882660e-06  7.11132 #burnt soil
+# [2,] 5.765319e-06 58.70650 #water
+# [3,] 8.647979e-06 34.18218 #vegetation
 
 frequenciesaugust <- freq(classaugust)
 tot3 = ncell(classaugust)
@@ -217,9 +217,9 @@ percentages3 = frequenciesaugust * 100 /  tot3
 percentages3
 
 #            value    count
-# [1,] 2.882660e-06 10.86722
-# [2,] 5.765319e-06 59.14084 
-# [3,] 8.647979e-06 29.99195
+# [1,] 2.882660e-06 10.86722 #burnt soil
+# [2,] 5.765319e-06 59.14084 #water
+# [3,] 8.647979e-06 29.99195 #vegetation
 
 ### Let's create a dataframe that represents the results obtained
 
@@ -252,8 +252,10 @@ p3
 # Let's now use the patchwork to merge into 3 graphs and evaluate the situation as a whole
 p1+p2+p3
 
+#### After comparing the histograms and evaluating the percentages, it is clear that the conclusions relating to the study carried out are:
 ### We can therefore note that, except for the surface of the water which has remained the same:
-# 1. The percentage of burned area increased during the 3 months of observation
-# and it is hoped that as the months pass, the situation will improve, as will the health of the vegetation;
-# 2. The percentage of vegetation, however, has decreased precisely because of these environmental situations which have affected its health
+# The percentage of soil burned increased during the 3 months of observation and it is hoped that
+# as the months pass the situation improves with the drop in temperatures.
+# The percentage of vegetation has instead decreased precisely due to these 
+# harsh environmental situations that have affected all of Sicily
 
