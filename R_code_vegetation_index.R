@@ -44,7 +44,8 @@ plot(difdvi)
 
 # Range DVI (8 bit): -255 a 255
 # Range DVI (16 bit): -65535 a 65535
-# Range NDVI: -1; 1
+# Range NDVI: -1; 1; The NDVI range will always vary between this range even if 
+# the images have different resolution (different bits)
 
 # Calculating NDVI 1992 and NDVI2006
 ndvi1992 = dvi1992/ (l1992[[1]]+ l1992[[2]])
