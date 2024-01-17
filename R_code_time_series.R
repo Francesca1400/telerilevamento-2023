@@ -49,7 +49,7 @@ cl <- colorRampPalette(c("blue","light blue","pink","red"))(100)
 plot(TGr, col=cl)
 
 
-# --------------------------------
+# ----------------------------------------------------------------------
 # Excercise 2: measured NO2 during the lockdown period 
 # Importing file
 
