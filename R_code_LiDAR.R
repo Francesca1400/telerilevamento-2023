@@ -29,7 +29,7 @@ dtm_2013
 dtm_2013d <- as.data.frame(dtm_2013, xy=T)
 head(dtm_2013d)
 
-# I rename the file
+# Let's now rename the file
 names(dtm_2013d) <- c("x", "y", "z")
 
 # Plotting
