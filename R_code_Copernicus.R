@@ -26,6 +26,7 @@ geom_raster(scd, mapping=aes(x=x, y=y, fill=Surface.Soil.Moisture)) +
 ggtitle("Soil Moisture from Copernicus")
 
 # Cropping an image
+# I use "crop" function to crop my images to the size I need
 ext <- c(23, 30, 62, 68)
 sc.crop <- crop(sc, ext)
 
