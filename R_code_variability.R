@@ -24,6 +24,7 @@ plot(sd3)
 
 # Now plotting with ggplot2
 # "ggploot2" is a R package dedicated to data visualization
+# which allows us to make our graphs more complete
 sd3d <- as.data.frame(sd3, xy=TRUE)
 ggplot()+ 
   geom_raster(sd3d, mapping = aes(x=x, y=y, fill=layer))
