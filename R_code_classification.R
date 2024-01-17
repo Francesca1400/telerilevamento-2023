@@ -13,7 +13,7 @@ library(RStoolbox)
 # Set working directory
 setwd("C:/lab/")  #Windows
 
-# Data import with brick function
+# Data import with "brick" function
 so <- brick("Solar_Orbiter_s_first_views_of_the_Sun_pillars.jpg")
 
 # Plotting with two different stretch
@@ -38,7 +38,7 @@ soclass <- setValues(so[[1]], kcluster$cluster)
 cl <- colorRampPalette(c('yellow','black','red'))(100)
 plot(soclass, col=cl)
 
-# -------------------------
+# ----------------------------------------------------------------------
 # Grand Canyon data
 
 gc <- brick("dolansprings_oli_2013088_canyon_lrg.jpg")
