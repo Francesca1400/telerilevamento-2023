@@ -69,7 +69,7 @@ plotRGB(july, 3, 2, 1, stretch="lin")
 plotRGB(august, 3, 2, 1, stretch="lin")
 dev.off()
 
-#---------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------
 #### Qualitative analysis of vegetation health by calculating DVI and NDVI
 
 ### Let's now calculate the DVI taking into account that:
