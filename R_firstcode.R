@@ -74,7 +74,7 @@ plotRGB(l2011, r=4, g=3, b=2, stretch="Lin")
 plotRGB(l2011, r=3, g=2, b=1, stretch="Lin")
 plotRGB(l2011, r=3, g=2, b=4, stretch="Lin")
 
-# Histogram stretching: It allows us to highlight the difference,
+# Hist (Histogram stretching): It allows us to highlight the difference,
 # between minimums and maximums in a more accentuated way
 par(mfrow = c(2,1))
 plotRGB(l2011, 4, 3, 2, stretch="Hist")
